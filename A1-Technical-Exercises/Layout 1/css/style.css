@@ -1,161 +1,160 @@
 /* Importing a custom font */
 @font-face {
-    font-family: 'PT Sans';
-    src: url('../fonts/PTSans-Regular.ttf') format('truetype'),
-         url('../fonts/PTSans-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans-Regular.ttf") format("truetype"),
+    url("../fonts/PTSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'PT Sans';
-    src: url('../fonts/PTSans-Bold.ttf') format('truetype'),
-         url('../fonts/PTSans-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans-Bold.ttf") format("truetype"),
+    url("../fonts/PTSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 /* Basic resets */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Set the body background color and font */
 body {
-    font-family: 'PT Sans', sans-serif;
-    background-color: #ffffff;
-    color: #333333;
+  font-family: "PT Sans", sans-serif;
+  background-color: #ffffff;
+  color: #333333;
 }
 
 /* Header and navigation styling */
 header {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10; /* Ensure the nav is above the overlay */
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Ensure the nav is above the overlay */
 }
 
 header nav {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    justify-content: flex-start; /* Align logo and nav links to the left */
-    background: transparent; /* Remove background color */
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: flex-start; /* Align logo and nav links to the left */
+  background: transparent; /* Remove background color */
 }
 
 header figure {
-    width: 80px; /* Adjust size of the circle */
-    height: 80px; /* Adjust size of the circle */
-    background-color: #ffffff; /* White background for the circle */
-    border-radius: 50%; /* Make it a circle */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Hide any overflow from the image */
-    margin-right: 20px; /* Add some space between the logo and links */
-
+  width: 80px; /* Adjust size of the circle */
+  height: 80px; /* Adjust size of the circle */
+  background-color: #ffffff; /* White background for the circle */
+  border-radius: 50%; /* Make it a circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide any overflow from the image */
+  margin-right: 20px; /* Add some space between the logo and links */
 }
 
 header figure img {
-    width: 100%; /* Ensure the image fits inside the circle */
-    height: auto;
+  width: 100%; /* Ensure the image fits inside the circle */
+  height: auto;
 }
 
 nav ul {
-    list-style: none;
-    display: flex; /* Display the links in a horizontal row */
-    margin-left: 0; /* Ensure the list starts right after the logo */
+  list-style: none;
+  display: flex; /* Display the links in a horizontal row */
+  margin-left: 0; /* Ensure the list starts right after the logo */
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 0 10px;
+  display: inline-block;
+  margin: 0 10px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #ffffff; /* White navigation links */
-    font-size: 1.25rem; /* Font size for navigation links */
-    font-weight: bold;  /* Make the text bold */
+  text-decoration: none;
+  color: #ffffff; /* White navigation links */
+  font-size: 1.25rem; /* Font size for navigation links */
+  font-weight: bold; /* Make the text bold */
 }
 
 /* Full screen overlay section */
 .fullscreen-overlay {
-    height: 100vh; /* Full screen height */
-    background-image: url('../images/DSC_0323.JPG');
-    background-size: cover;
-    background-position: center;
-    position: relative; /* Ensure relative positioning for absolute children */
-    display: flex; /* Flexbox to center the content */
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Stack elements vertically */
-    text-align: center; /* Center the text */
-    color: #ffffff; /* Set text color to white */
+  height: 100vh; /* Full screen height */
+  background-image: url("../images/DSC_0323.JPG");
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Ensure relative positioning for absolute children */
+  display: flex; /* Flexbox to center the content */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack elements vertically */
+  text-align: center; /* Center the text */
+  color: #ffffff; /* Set text color to white */
 }
 
 /* Position and style text inside the section */
 .fullscreen-overlay h1 {
-    font-size: 3rem; /* Large font size for headings */
-    margin-bottom: 1rem;
-    font-weight: bold; /* Apply bold font weight */
+  font-size: 3rem; /* Large font size for headings */
+  margin-bottom: 1rem;
+  font-weight: bold; /* Apply bold font weight */
 }
 
 .fullscreen-overlay p {
-    font-size: 1.5rem; /* Larger font size for paragraph text */
-    margin-bottom: 2rem;
-    line-height: 1.5; /* Improve readability with line height */
+  font-size: 1.5rem; /* Larger font size for paragraph text */
+  margin-bottom: 2rem;
+  line-height: 1.5; /* Improve readability with line height */
 }
 
 /* Scroll down icon container styling */
 .scroll-icon {
-    position: absolute;
-    bottom: 5%; /* Position the icon from the bottom */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2; /* Ensure the icon is above other content */
-    background-color: #ffffff; /* White background for the circle */
-    border-radius: 50%; /* Make it a circle */
-    padding: 15px; /* Space inside the circle around the icon */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  bottom: 5%; /* Position the icon from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* Ensure the icon is above other content */
+  background-color: #ffffff; /* White background for the circle */
+  border-radius: 50%; /* Make it a circle */
+  padding: 15px; /* Space inside the circle around the icon */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .scroll-icon img {
-    width: 30px; /* Adjust size if needed */
-    height: auto;
+  width: 30px; /* Adjust size if needed */
+  height: auto;
 }
 
 /* Responsive design for mobile */
 @media (max-width: 360px) {
-    .fullscreen-overlay h1 {
-        font-size: 2rem;
-    }
+  .fullscreen-overlay h1 {
+    font-size: 2rem;
+  }
 
-    .fullscreen-overlay p {
-        font-size: 1rem;
-    }
+  .fullscreen-overlay p {
+    font-size: 1rem;
+  }
 
-    .scroll-icon img {
-        width: 30px;
-    }
+  .scroll-icon img {
+    width: 30px;
+  }
 }
 
 /* Responsive design for tablet or small desktops */
 @media (min-width: 768px) and (max-width: 1366px) {
-    .fullscreen-overlay h1 {
-        font-size: 2.5rem;
-    }
+  .fullscreen-overlay h1 {
+    font-size: 2.5rem;
+  }
 
-    .fullscreen-overlay p {
-        font-size: 1.25rem;
-    }
+  .fullscreen-overlay p {
+    font-size: 1.25rem;
+  }
 
-    .scroll-icon img {
-        width: 40px;
-    }
+  .scroll-icon img {
+    width: 40px;
+  }
 }
