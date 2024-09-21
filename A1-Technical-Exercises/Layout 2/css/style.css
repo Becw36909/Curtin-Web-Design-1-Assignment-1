@@ -1,2 +1,102 @@
-/* Hi, I'm a css code comment, written a little bit different to html! 
-Add some css to this document */
+/* Basic resets for consistent rendering */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the body background color and font */
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* Header and navigation styling */
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensure the nav is above other content */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align links to the left */
+    padding: 20px;
+}
+
+header figure {
+    width: 50px; /* Adjust size for logo */
+    height: 50px; /* Adjust size for logo */
+    border-radius: 50%; /* Make it a circle */
+    overflow: hidden; /* Hide any overflow from the image */
+}
+
+header figure img {
+    width: 100%; /* Ensure the image fits inside the circle */
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Use flexbox for horizontal layout */
+}
+
+nav ul li {
+    margin: 0 10px; /* Spacing between links */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333333; /* Color for navigation links */
+}
+
+/* Styling for the article containing the gallery */
+article {
+    padding-top: 80px; /* Add space below the header */
+    text-align: center; /* Center text for article content */
+}
+
+/* Styling for the gallery section */
+.gallery {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the gallery container */
+}
+
+.gallery-container {
+    display: flex; /* Flex container for gallery items */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items */
+    width: 70%; /* Adjust this width as needed to fit screen */
+    max-width: 800px; /* Set a max width for larger screens */
+}
+
+/* Individual gallery item styling */
+.gallery-item {
+    width: calc(33.33% - 20px); /* Calculate width to fit three items */
+    margin: 5px; /* Spacing between items */
+    width: 200px; /* Set a fixed width for rectangle */
+    height: 150px; /* Set a fixed height for rectangle */
+    overflow: hidden; /* Hide overflow if image is larger */
+}
+
+
+.gallery-item img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 640px) {
+    .gallery {
+        justify-content: center; /* Center items on mobile */
+    }
+
+    .gallery-item {
+        width: 100%; /* Full width on mobile */
+        margin: 10px 0; /* Adjust margin for mobile */
+    }
+}
