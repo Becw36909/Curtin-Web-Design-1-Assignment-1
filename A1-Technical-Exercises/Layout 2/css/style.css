@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* Google Font weights for font Poppins */
 .poppins-thin {
   font-family: "Poppins", sans-serif;
   font-weight: 100;
