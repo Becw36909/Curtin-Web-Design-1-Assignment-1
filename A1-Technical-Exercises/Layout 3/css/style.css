@@ -1,2 +1,174 @@
-/* Hi, I'm a css code comment, written a little bit different to html! 
-Add some css to this document */
+/* Basic resets for consistent rendering */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.patua-one-regular {
+    font-family: "Patua One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+/* Set the body background color and font */
+body {
+    font-family: "Patua One", serif;
+    background-color: #f0f4f8; 
+    color: #333333;
+}
+
+/* Header and navigation styling */
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+header figure {
+    width: 80px; /* Adjust size of the circle */
+    height: 80px; /* Adjust size of the circle */
+    background-color: #ffffff; /* White background for the circle */
+    border-radius: 50%; /* Make it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide any overflow from the image */
+    margin-right: 20px; /* Add some space between the logo and links */
+  }
+  
+  header figure img {
+    width: 100%; /* Ensure the image fits inside the circle */
+    height: auto;
+  }
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 1.25rem; /* Font size for navigation links */
+    font-weight: bold; /* Make the text bold */
+}
+
+.main-title {
+    text-align: center; /* Center for desktop */
+    margin: 100px 0 5px; /* Add top margin to move it down */
+}
+
+/* Styling for the zigzag section */
+.zigzag {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px; 
+}
+
+/* Content container styling */
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px;
+    width: 1000px;
+    max-width: 100%; /* Ensure responsiveness */
+}
+
+/* Content item styling */
+.content-item {
+    width: calc(50% - 20px); /* Adjust as needed */
+    margin: 0; /* Remove margin to avoid extra space */
+}
+
+/* Text styling */
+.text {
+    flex: 1; /* Allow text to take available space */
+    padding: 10px; /* Add padding around the text */
+    align-self: flex-start; /* Align text at the top of the container */
+
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    width: 100%; /* Make the image fill the container's width */
+    height: 300px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the div without distortion */
+}
+
+
+/* Media queries for responsive design - mobile */
+@media (max-width: 640px) {
+    header figure {
+        width: 50px; /* Adjust size for logo */
+        height: 50px; /* Adjust size for logo */
+      }
+
+    .main-title {
+        text-align: left; /* Left align for mobile */
+        padding-left: 35px; /* Optional: add some padding for aesthetics */
+        margin-top: 90px; /* Ensure space above on mobile too */    }
+
+    .zigzag {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        margin-top: 2px; 
+
+    }
+
+    .content-container {
+        flex-direction: column; /* Change the flex direction */
+        width: 90%; /* Make items take up most of the width */
+        margin: 5px 0;
+        padding: 10px;
+
+    }
+
+    .content-item {
+        width: 100%; /* Make items take up full width */
+        margin: 10px 0;
+    }
+
+    .image img {
+        height: 200px; /* Set a different fixed height for mobile */
+    }
+
+    /* Control the order of content on mobile */
+    /* First container: text first, image second */
+    .content-container:nth-child(1) .text {
+        order: 1;
+    }
+    .content-container:nth-child(1) .image {
+        order: 2;
+    }
+
+    /* Second container: text first, image second */
+    .content-container:nth-child(2) .text {
+        order: 1; /* Text comes first */
+    }
+    .content-container:nth-child(2) .image {
+        order: 2; /* Image comes second */
+    }
+}

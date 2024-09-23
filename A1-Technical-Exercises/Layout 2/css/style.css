@@ -116,7 +116,7 @@
 /* Set the body background color and font */
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #ffffff;
+  background-color: #f0f0f0; /* Light gray background for the entire page */
   color: #333333;
 }
 
@@ -160,6 +160,8 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #333333; /* Color for navigation links */
+  font-size: 1.25rem; /* Font size for navigation links */
+  font-weight: bold; /* Make the text bold */
 }
 
 /* Styling for the article containing the gallery */

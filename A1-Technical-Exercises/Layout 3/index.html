@@ -1,1 +1,83 @@
-<!-- Hi, I'm a html code comment! Add some html in this document -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zig Zag - Layout 3</title>
+
+    <!-- Links to Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Patua+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header section with navigation -->
+    <header>
+      <nav>
+        <!-- Logo area -->
+        <figure>
+          <img
+            src="images/10838200_1015405255142930_2096066612419163119_o.jpg"
+            alt="Site Logo"
+          />
+        </figure>
+        <!-- Two Navigation Links -->
+        <ul>
+          <li><a href="#">Home</a></li>
+          <!-- Home link -->
+          <li><a href="#">About</a></li>
+          <!-- About link -->
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main content area (article) -->
+    <article>
+      <!-- Page title, styled with class 'main-title' -->
+      <h1 class="main-title">Zig Zag - Layout 3</h1>
+
+      <!-- Zigzag section that contains alternating text and image items -->
+      <section class="zigzag">
+        <!-- First content container: text on the left, image on the right -->
+        <div class="content-container">
+          <!-- Text item -->
+          <div class="content-item text">
+            <h2>Title 1</h2>
+            <!-- First item title -->
+            <p>
+              This is some text content for the first item, explaining details
+              about the content.
+            </p>
+          </div>
+          <!-- Image item -->
+          <div class="content-item image">
+            <img src="images/DSC_0323.JPG" alt="Placeholder Image 1" />
+          </div>
+        </div>
+
+        <!-- Second content container: image on the left, text on the right -->
+        <div class="content-container">
+          <!-- Image item -->
+          <div class="content-item image">
+            <img src="images/M85A7470.jpg" alt="Placeholder Image 2" />
+          </div>
+          <!-- Text item -->
+          <div class="content-item text">
+            <h2>Title 2</h2>
+            <!-- Second item title -->
+            <p>
+              This is some text content for the second item, providing more
+              information about the topic.
+            </p>
+          </div>
+        </div>
+      </section>
+    </article>
+  </body>
+</html>
